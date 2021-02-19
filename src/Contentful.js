@@ -1,9 +1,9 @@
-import { createClient } from 'contentful';
+const contentful = require("contentful");
 
-export default createClient({
-  space: "glnj7e8oad0g",
-  accessToken: "_8U_7HHA1vF34gOT0j1VqPFzYjSQfsRlG3PguGmeIe8"
-})
+export default contentful.createClient({
+  space: 'glnj7e8oad0g',
+  accessToken: '_8U_7HHA1vF34gOT0j1VqPFzYjSQfsRlG3PguGmeIe8'
+});
 // const contentful = require("contentful");
 // const client = contentful.createClient({
 //   // This is the space ID. A space is like a project folder in Contentful terms

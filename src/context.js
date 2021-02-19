@@ -21,8 +21,8 @@ class ProductProvider extends Component {
     maxPrice: 0,
     minSize: 0,
     maxSize: 0,
-    breakfast: false,
-    pets: false
+    // breakfast: false,
+    // pets: false
   };
   // getData content full
   getData = async () => {
@@ -79,7 +79,8 @@ class ProductProvider extends Component {
   }
   filterProducts = () => {
     let{
-      products, type, capacity, price, minSize, maxSize, breakfast,pets
+      products, type, capacity, price, minSize, maxSize 
+      // breakfast pets
     } = this.state
     // all the products
     let tempProducts = [...products];
@@ -100,13 +101,13 @@ class ProductProvider extends Component {
     // filter by size
     tempProducts = tempProducts.filter(product => product.size >= minSize && product.size <= maxSize )
     // filter by breakfast
-    if(breakfast) {
-      tempProducts = tempProducts.filter(product => product.breakfast === true)
-    }
-    // filter by breakfast
-    if(pets) {
-      tempProducts = tempProducts.filter(product => product.pets === true)
-    }
+    // if(breakfast) {
+    //   tempProducts = tempProducts.filter(product => product.breakfast === true)
+    // }
+    // filter by pets
+    // if(pets) {
+    //   tempProducts = tempProducts.filter(product => product.pets === true)
+    // }
     // change state
     this.setState({
       sortedProducts:tempProducts
